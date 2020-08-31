@@ -10,6 +10,9 @@ public class PlayerBehavior : MonoBehaviour
     [Tooltip("horizontal speed of the player")]
     public float horizontalSpeed = 2.0f;
 
+    [Tooltip("torque")]
+    public float torque = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class PlayerBehavior : MonoBehaviour
         var force = new Vector2(horizontalSpeed, 0);
 
         rb.AddForce(force);
+        rb.AddTorque(-torque);
         
     }
 }
