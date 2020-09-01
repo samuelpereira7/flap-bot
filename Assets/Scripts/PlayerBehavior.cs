@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerBehavior : MonoBehaviour
 {
     // reference to the Rigidbody component
@@ -17,7 +18,7 @@ public class PlayerBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        rb.SetRotation(0);
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class PlayerBehavior : MonoBehaviour
         var force = new Vector2(horizontalSpeed, 0);
 
         rb.AddForce(force);
-        rb.AddTorque(-torque);
         
+        //rb.AddTorque(-torque);
     }
 }
