@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649f4e532bad23b42a5267db3f512117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alvo: {fileID: 1786174413}
+  target: {fileID: 1786174413}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -472,7 +472,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -579,5 +579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2441eb116ad4fa1468f4e407520f7e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 2
-  torque: 3.5
+  horizontalSpeed: 3
+  jumpSpeed: 17
+  torque: 2

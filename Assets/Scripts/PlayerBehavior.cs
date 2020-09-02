@@ -11,6 +11,9 @@ public class PlayerBehavior : MonoBehaviour
     [Tooltip("horizontal speed of the player")]
     public float horizontalSpeed = 2.0f;
 
+    [Tooltip("jump speed of the player")]
+    public float jumpSpeed = 7.0f;
+
     [Tooltip("torque")]
     public float torque = 10f;
 
@@ -18,16 +21,30 @@ public class PlayerBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.SetRotation(0);
+        rb.SetRotation(90);
     }
 
     // Update is called once per frame
     void Update()
     {
-        var force = new Vector2(horizontalSpeed, 0);
+        // boost on X axis
+        transform.position += new Vector3(Time.deltaTime * horizontalSpeed, 0, 0);
 
-        rb.AddForce(force);
-        
+        if (WasTouchedOrClicked())
+        {
+            // boost on Y axis
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpSpeed);
+        }
+
         //rb.AddTorque(-torque);
+    }
+
+    bool WasTouchedOrClicked()
+    {
+        if (Input.GetButtonUp("Jump") || Input.GetMouseButton(0) ||
+            (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended))
+            return true;
+        else
+            return false;
     }
 }
