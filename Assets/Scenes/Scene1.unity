@@ -252,6 +252,7 @@ MonoBehaviour:
   tile: {fileID: 4287099516348605576, guid: e446a5e566801fb4f84068082c47032c, type: 3}
   startPoint: {x: 0, y: 0, z: -5}
   numSpawnIni: 5
+  obstacle: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
 --- !u!4 &782859849
 Transform:
   m_ObjectHideFlags: 0

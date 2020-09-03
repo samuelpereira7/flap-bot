@@ -10,11 +10,11 @@ public class ObstacleBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.GetComponent<PlayerBehavior>())
+        /*if(collision.gameObject.GetComponent<PlayerBehavior>())
         {
             Destroy(collision.gameObject);
             Invoke("ResetGame", waitingTime);
-        }
+        }*/
     }
 
     /// <summary>
