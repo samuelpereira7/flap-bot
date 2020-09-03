@@ -47,8 +47,8 @@ public class GameController : MonoBehaviour
         nextTilePos = nextTile.position;
         nextTileRot = nextTile.rotation;
 
-        var newObstacle = Instantiate(obstacle, nextObsPos, nextObsRot);
-        nextObsPos = nextTile.position + new Vector3(3, Random.Range(0f, -7.0f), 0);
+        Instantiate(obstacle, nextObsPos, nextObsRot);
+        nextObsPos = nextTile.position + new Vector3(3, Random.Range(0f, -4.5f), 0);
         nextObsRot = nextTile.rotation;
     }
 
