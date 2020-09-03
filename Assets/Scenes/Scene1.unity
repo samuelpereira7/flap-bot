@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 4287099516348605576, guid: e446a5e566801fb4f84068082c47032c, type: 3}
   startPoint: {x: 0, y: 0, z: -5}
-  numSpawnIni: 3
+  numSpawnIni: 5
 --- !u!4 &782859849
 Transform:
   m_ObjectHideFlags: 0
@@ -264,8 +264,65 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1778339763
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937832, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474647307975937835, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cb1fde210b55e4e438ee228e3cdccbd1, type: 3}
 --- !u!1 &1786174409
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +426,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1786174414
 BoxCollider2D:
@@ -409,6 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2441eb116ad4fa1468f4e407520f7e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 3
+  horizontalSpeed: 10
   jumpSpeed: 17
   torque: 2
