@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingTime: 2
+  explosion: {fileID: 8881873624262252886, guid: 8c866cc7c4c656e4a9313af334807496, type: 3}
 --- !u!1 &4474647306924751180
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingTime: 2
+  explosion: {fileID: 8881873624262252886, guid: 8c866cc7c4c656e4a9313af334807496, type: 3}
 --- !u!1 &4474647307975937835
 GameObject:
   m_ObjectHideFlags: 0

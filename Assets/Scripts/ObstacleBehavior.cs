@@ -8,10 +8,19 @@ public class ObstacleBehavior : MonoBehaviour
     [Tooltip("time to wait before the game starts")]
     public float waitingTime = 2.0f;
 
+    [Tooltip("explosion particle system")]
+    public GameObject explosion;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<PlayerBehavior>())
         {
+            if (explosion != null)
+            {
+                var particles = Instantiate(explosion, collision.gameObject.transform.position, Quaternion.identity);
+                Destroy(particles, 1.0f);
+            }
+
             Destroy(collision.gameObject);
             Invoke("ResetGame", waitingTime);
         }
