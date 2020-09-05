@@ -39,6 +39,8 @@ public class PlayerBehavior : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpSpeed);
         }
 
+
+
         //rb.AddTorque(-torque);
     }
 
