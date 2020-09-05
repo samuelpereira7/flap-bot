@@ -16,7 +16,10 @@ public class MainMenu : MonoBehaviour
     {
         
     }
-    
+    /// <summary>
+    /// method to load the scene.
+    /// </summary>
+    /// <param name="nameScene">Name of scene to load</param>
     public void loadScene(string nameScene)
     {
         SceneManager.LoadScene(nameScene);

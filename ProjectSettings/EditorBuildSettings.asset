@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/tela inicial.unity
+    path: Assets/Scenes/telainicial.unity
     guid: 89b2833bf567835449b2b79950b75da9
   - enabled: 1
     path: Assets/Scenes/Scene1.unity

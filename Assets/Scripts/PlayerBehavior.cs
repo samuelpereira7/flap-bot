@@ -27,6 +27,9 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MenuPauseBehavior.paused)
+            return;
+
         // boost on X axis
         transform.position += new Vector3(Time.deltaTime * horizontalSpeed, 0, 0);
 
