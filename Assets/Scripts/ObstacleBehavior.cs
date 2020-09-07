@@ -13,6 +13,9 @@ public class ObstacleBehavior : MonoBehaviour
     /// </summary>
     private GameObject plr;
 
+    [Tooltip("explosion particle system")]
+    public GameObject explosion;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<PlayerBehavior>())
@@ -20,7 +23,12 @@ public class ObstacleBehavior : MonoBehaviour
             collision.gameObject.SetActive(false);
             plr = collision.gameObject;
 
-                   
+            if (explosion != null)
+            {
+                var particles = Instantiate(explosion, collision.gameObject.transform.position, Quaternion.identity);
+                Destroy(particles, 0.7f);
+            }
+
             //Destroy(collision.gameObject);
             Invoke("ResetGame", waitingTime);
         }
