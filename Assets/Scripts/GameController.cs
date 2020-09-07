@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 public class GameController : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Advertisement.Initialize("3810017");
+
         nextTilePos = startPoint;
         nextTileRot = Quaternion.identity;
 

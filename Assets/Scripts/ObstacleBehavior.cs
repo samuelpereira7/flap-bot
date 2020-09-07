@@ -39,7 +39,6 @@ public class ObstacleBehavior : MonoBehaviour
     /// </summary>
     void ResetGame()
     {
-
         var gameOverMenu = GetGameOverMenu();
         
         gameOverMenu.SetActive(true);
@@ -58,9 +57,8 @@ public class ObstacleBehavior : MonoBehaviour
 
         if (buttonContinue)
         {
-            // buttonContinue.onClick.AddListener(UnityAdController.ShowRewardAd);
-            //UnityAdController.obstacle = this;
-
+            buttonContinue.onClick.AddListener(UnityAdController.ShowRewardAd);
+            UnityAdController.obstacle = this;
         }
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -100,8 +98,6 @@ public class ObstacleBehavior : MonoBehaviour
         var go = GetGameOverMenu();
         go.SetActive(false);
         plr.SetActive(true);
-
-
     }
     /// <summary>
     /// Find menuGameOver
@@ -110,7 +106,6 @@ public class ObstacleBehavior : MonoBehaviour
     GameObject GetGameOverMenu()
     {
         return GameObject.Find("Canvas").transform.Find("MenuGameOver").gameObject;
-        
     }
 
     // Start is called before the first frame update
