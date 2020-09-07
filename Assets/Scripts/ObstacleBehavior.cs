@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -39,7 +40,6 @@ public class ObstacleBehavior : MonoBehaviour
     /// </summary>
     void ResetGame()
     {
-
         var gameOverMenu = GetGameOverMenu();
         
         gameOverMenu.SetActive(true);
@@ -58,9 +58,9 @@ public class ObstacleBehavior : MonoBehaviour
 
         if (buttonContinue)
         {
-            // buttonContinue.onClick.AddListener(UnityAdController.ShowRewardAd);
-            //UnityAdController.obstacle = this;
-
+            StartCoroutine(ShowContinue(buttonContinue));
+            buttonContinue.onClick.AddListener(UnityAdController.ShowRewardAd);
+            UnityAdController.obstacle = this;
         }
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -92,6 +92,35 @@ public class ObstacleBehavior : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         */
     }
+
+    public IEnumerator ShowContinue(Button buttonContinue)
+    {
+        var btnText = buttonContinue.GetComponentInChildren<Text>();
+
+        while (true)
+        {
+            if (UnityAdController.nextTimeReward.HasValue && (DateTime.Now < UnityAdController.nextTimeReward.Value))
+            {
+                buttonContinue.interactable = false;
+
+                TimeSpan rem = UnityAdController.nextTimeReward.Value - DateTime.Now;
+
+                var contagemRegressiva = string.Format("{0:D2}:{1:D2}", rem.Minutes, rem.Seconds);
+                btnText.text = contagemRegressiva;
+                yield return new WaitForSeconds(1f);
+            }
+            else
+            {
+                buttonContinue.interactable = true;
+                buttonContinue.onClick.AddListener(UnityAdController.ShowRewardAd);
+                UnityAdController.obstacle = this;
+                btnText.text = "Continue (Ad)";
+                break;
+            }
+        }
+    }
+
+
     /// <summary>
     /// Continue the game
     /// </summary>
@@ -100,17 +129,15 @@ public class ObstacleBehavior : MonoBehaviour
         var go = GetGameOverMenu();
         go.SetActive(false);
         plr.SetActive(true);
-
-
+        gameObject.SetActive(false);
     }
     /// <summary>
-    /// Find menuGameOver
+    /// Get menuGameOver
     /// </summary>
     /// <returns> gameObject MenuGameOver</returns>
     GameObject GetGameOverMenu()
     {
         return GameObject.Find("Canvas").transform.Find("MenuGameOver").gameObject;
-        
     }
 
     // Start is called before the first frame update

@@ -1387,7 +1387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main menu
+  m_Text: Main Menu
 --- !u!222 &548209719
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2869,7 +2869,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TORTURA (AD)
+  m_Text: Continue (Ad)
 --- !u!222 &1994020801
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2948,7 +2948,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Se FUDEU!!!
+  m_Text: Game Over!
 --- !u!222 &2025310652
 CanvasRenderer:
   m_ObjectHideFlags: 0

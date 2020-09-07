@@ -22,7 +22,13 @@ public class MainMenu : MonoBehaviour
     /// <param name="nameScene">Name of scene to load</param>
     public void loadScene(string nameScene)
     {
+        if (UnityAdController.showAds)
+        {
+            // show an ad
+            UnityAdController.ShowAd();
+        }
+
         SceneManager.LoadScene(nameScene);
-        
+
     }
 }
