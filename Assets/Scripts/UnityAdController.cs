@@ -17,7 +17,7 @@ public class UnityAdController : MonoBehaviour
     // Obstacle reference
     public static ObstacleBehavior obstacle;
 
-    public static void ShowAd()
+    public static void ShowAd1()
     {
         if (Advertisement.IsReady())
         {
@@ -25,7 +25,7 @@ public class UnityAdController : MonoBehaviour
         }
     }
 
-    public static void ShowAd1()
+    public static void ShowAd()
     {
         // ad options
         ShowOptions options = new ShowOptions();
@@ -42,7 +42,7 @@ public class UnityAdController : MonoBehaviour
     }
 
     /// <summary>
-    /// Method responsible to show ad with reward
+    /// Method responsible for showing ad with reward
     /// </summary>
     public static void ShowRewardAd()
     {

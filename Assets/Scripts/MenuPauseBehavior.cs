@@ -44,7 +44,7 @@ public class MenuPauseBehavior: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        paused = false;
+        //paused = false;
         Pause(false);
     }
 
