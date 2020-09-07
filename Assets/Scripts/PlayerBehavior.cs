@@ -17,11 +17,15 @@ public class PlayerBehavior : MonoBehaviour
     [Tooltip("torque")]
     public float torque = 10f;
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.SetRotation(90);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             // boost on Y axis
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpSpeed);
+            audioSource.PlayOneShot(audioSource.clip, 0.7F);
         }
 
 
