@@ -27,6 +27,9 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MenuPauseBehavior.paused)
+            return;
+
         // boost on X axis
         transform.position += new Vector3(Time.deltaTime * horizontalSpeed, 0, 0);
 
@@ -35,6 +38,8 @@ public class PlayerBehavior : MonoBehaviour
             // boost on Y axis
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpSpeed);
         }
+
+
 
         //rb.AddTorque(-torque);
     }
