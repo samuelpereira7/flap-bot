@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ObstacleBehavior : MonoBehaviour
@@ -19,7 +17,7 @@ public class ObstacleBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.GetComponent<PlayerBehavior>())
+        if (collision.gameObject.GetComponent<PlayerBehavior>())
         {
             collision.gameObject.SetActive(false);
             plr = collision.gameObject;
@@ -41,7 +39,7 @@ public class ObstacleBehavior : MonoBehaviour
     void ResetGame()
     {
         var gameOverMenu = GetGameOverMenu();
-        
+
         gameOverMenu.SetActive(true);
 
         var btns = gameOverMenu.transform.GetComponentsInChildren<Button>();
@@ -143,12 +141,12 @@ public class ObstacleBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

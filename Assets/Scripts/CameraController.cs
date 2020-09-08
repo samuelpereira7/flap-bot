@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
@@ -13,12 +11,13 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         cameraZ = transform.position.z;
+        Debug.Log("camera start");
     }
 
 
     void Update()
     {
-        if(target)
+        if (target)
             transform.position = new Vector3(target.position.x + 0.5f, 0, cameraZ);
     }
 }

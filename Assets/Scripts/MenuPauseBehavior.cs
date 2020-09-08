@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuPauseBehavior: MonoBehaviour
+public class MenuPauseBehavior : MonoBehaviour
 {
-    
+
     public static bool paused;
 
     [SerializeField]
@@ -15,6 +13,7 @@ public class MenuPauseBehavior: MonoBehaviour
     /// </summary>
     public void Restart()
     {
+        Score.score = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
@@ -25,7 +24,7 @@ public class MenuPauseBehavior: MonoBehaviour
     public void Pause(bool isPaused)
     {
         paused = isPaused;
-        
+
         Time.timeScale = (paused) ? 0 : 1;
 
         menuPausePanel.SetActive(paused);
@@ -51,6 +50,6 @@ public class MenuPauseBehavior: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

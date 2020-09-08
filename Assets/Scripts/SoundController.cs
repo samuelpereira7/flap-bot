@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
@@ -22,6 +20,7 @@ public class SoundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("score0");
         GameObject.DontDestroyOnLoad(gameObject);
     }
 
