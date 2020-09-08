@@ -9,12 +9,9 @@ public class Score : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("new score1 agr vai porra");
-
         if (other.GetComponent<PlayerBehavior>())
         {
             score += 100;
-            Debug.Log("new score2" + score.ToString());
             GameObject.Find("Canvas").transform.Find("ScoreText").GetComponent<Text>().text = score.ToString();
         }
     }
