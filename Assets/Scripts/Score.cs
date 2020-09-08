@@ -19,18 +19,6 @@ public class Score : MonoBehaviour
         }
     }
 
-    /*  private void OnTriggerEnter2D(Collider2D other)
-      {
-          // check if the player has passed through the end of the BasicTile
-          if (other.GetComponent<PlayerBehavior>())
-          {
-              GameObject.FindObjectOfType<GameController>().SpawnNextTile();
-
-              // destroy the BasicTile
-              Destroy(transform.parent.gameObject, timeDestroy);
-          }
-      }*/
-
     // Start is called before the first frame update
     void Start()
     {

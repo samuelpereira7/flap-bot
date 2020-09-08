@@ -60,35 +60,6 @@ public class ObstacleBehavior : MonoBehaviour
             buttonContinue.onClick.AddListener(UnityAdController.ShowRewardAd);
             UnityAdController.obstacle = this;
         }
-
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        /*
-        var gameOverMenu = GetGameOverMenu();
-        gameOverMenu.SetActive(true);
-
-        var botoes = gameOverMenu.transform.GetComponentsInChildren<Button>();
-        Button botaoContinue = null;
-
-        foreach (var botao in botoes)
-        {
-            if (botao.gameObject.name.Equals("BotaoContinuar")) ;
-            {
-                botaoContinue = botao;
-                break;
-            }
-        }
-
-        if (botaoContinue)
-        {
-            StartCoroutine(ShowContinue(botaoContinue));
-
-            botaoContinue.onClick.AddListener(UnityAdControle.ShowRewardAd);
-            UnityAdControle.obstaculo = this;
-        }
-
-        // reinicia o jogo
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        */
     }
 
     public IEnumerator ShowContinue(Button buttonContinue)

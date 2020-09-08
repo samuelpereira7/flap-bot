@@ -42,8 +42,6 @@ public class PlayerBehavior : MonoBehaviour
             audioSource.PlayOneShot(audioSource.clip, 0.7F);
         }
 
-
-
         //rb.AddTorque(-torque);
     }
 
